@@ -1,7 +1,33 @@
-*{  font-family: montserrat;    }
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Roboto&display=swap');
+*{  font-family: montserrat;    transition: 0.2s;   }
+ul{ list-style: none;   margin: 0;  padding: 0; }
+li a{   text-decoration: none;  color: initial; }
+body{   padding: 0; margin: 0;  cursor: pointer;    background-color: #99999999}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito+Sans:opsz@6..12&family=Open+Sans&family=Roboto&display=swap');
 
 
 /* Header */
+header{ display: flex;  justify-content: center;    text-align: center; padding: 10px 0;    align-items: center;    }
+header div{ padding: 0 15px;    }
+header img{ height: 120px;  width: auto;        }
+header div:last-child{  padding-left: 0;    }
 
-#clg-name{  font-family: roboto; text-transform: uppercase;  font-size: 4em;    font-weight: 900;    text-shadow: 4px -3px #000;    color: red}
+#clg-name{  font-family: nunito ; text-transform: uppercase;  font-size: 3em;    font-weight: 1000;    text-shadow: -4px 1px #555;    color: red; -webkit-text-stroke: 1px #fff;  margin: 0;  line-height: 50px;  }
+header div span{    display: block; margin: 5px 0;  }
+header div span:nth-child(2) { color: blue;   font-weight: 600; font-size: 20px;    }
+header div span:is(span:nth-child(3), span:last-child){    color: darkgreen;   font-size: 20px; font-weight: 700;   }
+
+
+/* Navigation */
+nav{    background-color: #4E7D85;    border-top: 4px solid #f27418;  }
+nav ul{ text-align: center; }
+nav ul li{  display: inline-block;  padding: 15px 10px; border-bottom: 4px solid #4e7d85;   position: relative; width: auto;    }
+nav ul li a{    color: #fff;    text-transform: uppercase;  font-weight: 600;   }
+nav ul li:hover{    border-bottom: 4px solid #FBF36E;   }
+nav>ul>.has-sub:hover{    box-shadow: 0px 0px 10px #00000055; position: relative;  z-index: 20;   }
+nav ul li:hover a{  color: #FBF36E; }
+nav ul .has-sub .sub-nav{    display: none;  position: absolute;    top: 0;  left: 50%;  transform: translate(-50% , 8.75%);    width: max-content; }
+nav ul .has-sub:hover .sub-nav{ display: block; transition-delay: 2s; }
+nav .has-sub .sub-nav li{   display: block; width: 15vw;    text-align: left;   border-bottom: 2px solid #ffffff77;  background-color: #39c4f955;   }
+nav .has-sub .sub-nav li a{ color: #fff;    font-size: 15px;    padding-left: 10px; text-transform: capitalize; font-weight: 500;   letter-spacing: .5px;   }
+nav .has-sub .sub-nav li:hover{ transform:scale(1.2);   background-color: #39c4f9;    border: none; border-radius: 50px;    }
+nav .has-sub .sub-nav li:hover a{   font-size: .85em;    }
